@@ -205,18 +205,6 @@ color:green
     font-weight:bold
 }
 
-.readMore {
-    color:rgba(123,146,78,255);
-    text-align:right;
-    margin-top:30px;
-    margin-right:40px;
-    cursor:pointer
-}
-
-.readMore:hover {
-    color:green;
-    text-decoration:underline;
-}
 
 #validatePassword {
     margin-top:10px;
