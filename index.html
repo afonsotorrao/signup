@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeatFinder</title>
+    <link rel="stylesheet" href = "style.css">
+</head>
+<body>
+    <div class="image"></div>
+    <div class="main">
+        <div class="message">
+            <div class="name">SeatFinder</div>
+            <div class="bio">Find the best and cheapest tickets for your favourite teams' games!</div>
+        </div>
+        <div class="signup">
+            <div class="signup-message">Let's do it!</div>
+            <div class="form">
+                <form action = "#" id ="signUp" method = "post">
+                    <div class="form-group">
+                        <label for = "userFirstName">First Name *</label>
+                        <input type = "text" name = "userFirstName" id = "userFirstName" placeholder = "Albus" pattern = "[A-Z][a-z]*" required>
+                    </div>
+                    <div class="form-group">
+                        <label for = "userLastName">Last Name *</label>
+                        <input type = "text" name = "userLastName" id = "userLastName" placeholder = "Dumbledore" pattern = "[A-Z][a-z]*" required>
+                    </div>
+                    <div class="form-group">
+                        <label for = "userEmail">Email *</label>
+                        <input type = "email" name = userEmail id = "userEmail" pattern = "[^@\s]+@[^@\s]+\.[^@\s]+" placeholder = "albus@hogwarts.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for = "userPhone">Phone Number</label>
+                        <input type = "text" name = userPhone id = "userPhone" pattern = "^\d{9}" placeholder = "910111222">
+                    </div>
+                    <div class="form-group">
+                        <label for ="userPassword">Password *</label>
+                        <input type = "password" name = userPassword id = userPassword minlength="5" maxlength="15" placeholder = "5 to 15 characters" required>
+                    </div>
+                    <div class="form-group">
+                        <label for ="confirmPassword">Confirm Password *</label>
+                        <input type = "password" name = confirmPassword id = confirmPassword minlength="5" maxlength="15" placeholder = "5 to 15 characters" required>
+                        <div id="validatePassword">Passwords do not match.</div>
+                    </div>
+                    <div class="login">
+                        <button id = "createBtn" type = "submit" onclick = "return Validate()">Create Account</button>
+                        <div class="account">Already have an account? <span id = loginBtn> Log in</span></div></div>
+                </form>
+            </div>
+        </div>
+    <div class="reviews">
+        <div class="review">
+            <div class="profile">
+                <div class="p1"></div>
+            </div>
+            <div class="n">Paulo Santos</div>
+            <div class="feedback">I've finally watched Esgaio playing live. Dreams do come true!</div>
+        </div>
+        <div class="review">
+            <div class="profile">
+                <div class="p2"></div>
+            </div>
+            <div class="n">Pepito Rodriguez</div>
+            <div class="feedback">Coach never puts me in. Jokes on him, thanks to SeatFinder I watch the game better from the stands.</div>
+        </div>
+        <div class="review">
+            <div class="profile">
+                <div class="p3"></div>
+            </div>
+            <div class="n">Bobby Charlton</div>
+            <div class="feedback">Woof!!! Woof woof.</div>
+            <div class="readMore">Read more (very real) reviews here</div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        let password = document.getElementById("userPassword")
+        let confirmPassword = document.getElementById("confirmPassword")
+        let validatePassword = document.getElementById("validatePassword")
+        function Validate(){
+            if (password.value != confirmPassword.value) {
+                validatePassword.style.color = "red"
+                return false
+            }
+            else {
+                validatePassword.style.color = "black"
+            return true}}
+    </script>
+</body>
+</html>
